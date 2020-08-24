@@ -1,10 +1,11 @@
 def fizzbuzz(number)
-  case number
-  when %3 == 0 unless number%5 == 0
+  if number%3 == 0 && number%5 != 0
     'fizz'
-  when %5 == 0 unless number%3 == 0
+  elsif number%5 == 0 && number%3 != 0
     'buzz'
-  when %15 == 0
+  elsif number%15 == 0
     "fizzbuzz"
+  else 
+    number
   end
 end
